@@ -16,8 +16,6 @@ export const envConfigs = {
     password: process.env.REDIS_PASSWORD
   },
   mongo: {
-    dbUrl: process.env.DATABASE_URL || '',
-    database: process.env.DATABASE_NAME,
-    collection: process.env.DATABASE_COLLECTION
+    dbUrl: process.env.DATABASE_URL || ''
   }
 };
