@@ -1,5 +1,5 @@
 import { Schema } from 'mongoose';
-import mongoose from "./index";
+import mongoose from './index';
 
 const todoSchema:Schema = new mongoose.Schema({
   title: {
@@ -14,6 +14,6 @@ const todoSchema:Schema = new mongoose.Schema({
   timestamps: true
 });
 
-const Todo = mongoose.model("backend_tasks_brijesh", todoSchema);
+const Todo = mongoose.model('backend_tasks_brijesh', todoSchema);
 
 export { Todo };

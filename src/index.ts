@@ -1,4 +1,4 @@
-import mqttClient from "./mqtt-client";
+import mqttClient from './mqtt-client';
 import functions from './services';
 const topic:string = '/nodejs/mqtt';
 
