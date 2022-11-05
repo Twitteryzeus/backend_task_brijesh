@@ -1,6 +1,7 @@
+import { Schema } from 'mongoose';
 import mongoose from "./index";
 
-const todoSchema = new mongoose.Schema({
+const todoSchema:Schema = new mongoose.Schema({
   title: {
     type: String,
     required: true

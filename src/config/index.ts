@@ -12,7 +12,7 @@ export const envConfigs = {
   },
   redis: {
     host: process.env.REDIS_HOST,
-    port: process.env.REDIS_PORT,
+    port: process.env.REDIS_PORT || 33713,
     password: process.env.REDIS_PASSWORD
   },
   mongo: {
