@@ -11,6 +11,7 @@ const redisClient = redis.createClient({
 
 const set = async (key: string = 'BACKEND_TASK_BRIJESH', value: string = '') => {
   try {
+    await redisClient.connect();
     await redisClient.set(key, value);
     return true;
   } catch (error) {
@@ -21,6 +22,7 @@ const set = async (key: string = 'BACKEND_TASK_BRIJESH', value: string = '') => 
 
 const get = async (key = 'BACKEND_TASK_BRIJESH') => {
   try {
+    await redisClient.connect();
     const value = await redisClient.get(key);
     return value;
   } catch (error) {
@@ -31,6 +33,7 @@ const get = async (key = 'BACKEND_TASK_BRIJESH') => {
 
 const clear = async (key = 'BACKEND_TASK_BRIJESH') => {
   try {
+    await redisClient.connect();
     const value = await redisClient.del(key);
     return value;
   } catch (error) {
