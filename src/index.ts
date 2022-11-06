@@ -14,3 +14,9 @@ mqttClient.on('connect', () => {
     }
   })
 });
+
+mqttClient.on('message', function (topic, message) {
+  // message is Buffer
+  console.log('Received Message:', topic, message.toString())
+  mqttClient.end()
+});
