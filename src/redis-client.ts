@@ -19,7 +19,7 @@ const set = async (key: string = 'BACKEND_TASK_BRIJESH', value: string = '') => 
   }
 };
 
-const get = async (key = 'BACKEND_TASK_BRIJESH'): Promise<string | null> => {
+const get = async (key = 'BACKEND_TASK_BRIJESH') => {
   try {
     const value = await redisClient.get(key);
     return value;
@@ -29,7 +29,7 @@ const get = async (key = 'BACKEND_TASK_BRIJESH'): Promise<string | null> => {
   }
 }
 
-const clear = async (key = 'BACKEND_TASK_BRIJESH'): Promise<number | null> => {
+const clear = async (key = 'BACKEND_TASK_BRIJESH') => {
   try {
     const value = await redisClient.del(key);
     return value;
