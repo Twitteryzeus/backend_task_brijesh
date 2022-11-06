@@ -1,11 +1,9 @@
-import { Todo as TodoModel } from '../../schema/item.model';
+import { createTodo } from './create-todo';
+import { todos } from './todos';
 
-const testToFind = async () => {
-  try {
-    console.log(await TodoModel.find());
-  } catch (error) {
-    console.log(error);
-  }
-};
+const methods = {
+  createTodo,
+  todos
+}
 
-export default testToFind;
+export default methods;

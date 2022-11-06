@@ -1,7 +1,7 @@
-import testToFind from './todos';
+import todo from './todos';
 
-const functions = {
-  testToFind
+const services = {
+  todo
 };
 
-export default functions;
+export default services;
